@@ -13,7 +13,7 @@
      *** create a service program.  The former is recommended as this code is very light and does not justify the cost of
      *** loading it as a service program.
      *** Copyright Javier Sanchez 2020.
-     *** Licensed under GPL 3.0.
+     *** Licensed under GNU GPL 3.0.
      ***
      H NOMAIN
      ***
