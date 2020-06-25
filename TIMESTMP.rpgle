@@ -1,3 +1,20 @@
+     *** TIMESTMP - Module to produce an *ISO time-stamp and return it as a character string.
+     *** Users of this module should prototype it as follows:
+     *** D TIMESTMP        PR             26Z
+     *** or, as well
+     *** D TIMESTMP        PR             26A
+     *** depending on the type of variable they want to load it on.
+     *** It will return a time-stamp with microsecond precision.  Pay attention to the <precisionIndicator> field of the
+     *** API call.  This function, will internally obtain first a time-stamp value with no separator characters at all.
+     *** It will then build a standard *ISO time-stamp just as the %TIMESTAMP built-in function does, with the
+     *** benefit of having full-microsecond precision.  %TIMESTAMP by default will return a millisecond precision, with 
+     *** only three (left-most) significant digits padded with three (right-most) zeros.
+     *** Compile this as module using the CRTRPGMOD command.  Then, if you want, may use it as a bound module or may
+     *** create a service program.  The former is recommended as this code is very light and does not justify the cost of
+     *** loading it as a service program.
+     *** Copyright Javier Sanchez 2020.
+     *** Licensed under GPL 3.0.
+     ***
      H NOMAIN
      ***
      D QWCCVTDT        PR                  EXTPGM('QWCCVTDT')
